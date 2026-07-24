@@ -12,44 +12,66 @@ import Contact from './Contact';
 const Home = () => {
 
         const heroText = [
-                <div>
-                        PhD, BASP Lab, Heriot-Watt University, Edinburgh &nbsp;|&nbsp; Erasmus Mundus MSc, IPCV
-                        <div className='academic-hero'>
-                                <AcademicBar className='academic-hero' />
-                        </div>                        
+                <div key="hero-text">
+                <p>
+                Researcher at Vicomtech in Donostia–San Sebastián&nbsp; | &nbsp;PhD
+                Candidate at Universidad Politécnica de Madrid&nbsp; | &nbsp;Erasmus
+                Mundus MSc in Image Processing and Computer Vision (IPCV)
+                </p>
+
+                <div className="academic-hero">
+                <AcademicBar />
                 </div>
-        ];
+                </div>,
+                ];
 
         
 
         const introText = [
-                <p style={{marginLeft: '10%', marginRight: 0}}>
-                        I am a current <b>PhD</b> scholar at the <b>Biomedical and Astronomical Signal Processing (BASP) Laboratory,
-                        Heriot-Watt University, Edinburgh, UK</b>. I am researching in the field of physics-based astronomical
-                        image reconstruction of black holes. 
+                <p style={{ marginLeft: '10%', marginRight: 0 }}>
+                        I am currently a <b>Researcher at Vicomtech</b> in Donostia–San Sebastián and
+                        an <b>Industrial PhD candidate in Communication Technologies and Systems</b> at
+                        the <b>Polytechnic University of Madrid</b>.
                         <br /><br />
-                        I recently completed my Triple-Masters degree in Image Processing and Computer Vision (<b>IPCV MSc</b>) at 
-                        universities in Hungary, Spain, and France, graduating with a 4.51/5 GPA and placing second in my batch. 
-                        I was fortunate to study with a 100% IPCV Excellence Scholarship. During my final semester, I interned 
-                        at <b>IMS Bordeaux</b>, working on "<i>Parameter Learning in Tomography.</i>"
+
+                        My doctoral research focuses on AI-driven pipelines for creating virtual
+                        environments, humans, and objects from their real-world counterparts. My work
+                        combines multimodal scene understanding, computer vision, 3D reconstruction,
+                        and digital representation to support immersive and interactive media
+                        applications.
                         <br /><br />
-                        My academic journey began with a Bachelor of Technology degree from Amity University in Kolkata, India, in 2019, where 
-                        I was honored as the Silver Medalist in Electronics and Communication Engineering. My undergraduate thesis focused on 
-                        a medical imaging project in the realms of image processing and deep learning, earning "<i>extraordinary</i>" remarks. This 
-                        project built upon work I undertook during a summer internship at the prestigious Indian Statistical Institute.
+
+                        I joined <b>Vicomtech</b> in February 2024 as a Research Intern, later
+                        progressed to Research Assistant, and currently work as a Researcher in the
+                        Digital Media Department. Within the Interactive Media research line, I
+                        investigate methods for integrating real-world physical objects into immersive
+                        XR experiences.
                         <br /><br />
-                        I have been recognized for my work with numerous awards and honors, including sponsorship of the Synapse AI Symposium, 
-                        winning the Cybathlon 2024 Vision Assistance Challenge, and receiving the Erasmus+ Grant.
+
+                        My research has included volumetric capture, 3D scene reconstruction, and
+                        Gaussian Splatting. I have developed and extended Gaussian Splatting methods
+                        to improve the accuracy and efficiency of volumetric rendering while reducing
+                        computational complexity.
                         <br /><br />
-                        Before embarking on my current academic journey, I worked for three years as a Software Developer at TCS, from June 
-                        2019 to August 2022. During my tenure, I primarily specialized in frontend development with React JS, and occasionally 
-                        delved into managing SQL databases and some .NET backend development with C#.
+
+                        I hold an <b>Erasmus Mundus Joint MSc in Image Processing and Computer Vision</b>,
+                        completed across <b>Pázmány Péter Catholic University</b> in Hungary, the
+                        <b> Autonomous University of Madrid</b> in Spain, and the
+                        <b> University of Bordeaux</b> in France.
                         <br /><br />
-                        My academic and professional experiences have fueled my deep passion for applied mathematics, particularly within the 
-                        domains of Image Processing and Computer Vision. I find immense satisfaction in working with complex mathematical 
-                        algorithms and numerical data. Additionally, I have a profound interest in Astronomy and Cosmology, which continues 
-                        to inspire my intellectual pursuits.
-                </p>
+
+                        I also hold a <b>BSc in Computer Science Engineering</b> from the
+                        <b> Budapest University of Technology and Economics</b>. Before moving into
+                        research, I worked as a <b>Software Engineer at SwiconGroup</b>, where I
+                        developed backend and frontend features for contract management, HR workflow,
+                        and sales management applications using Node.js, TypeScript, Angular, and Java.
+                        <br /><br />
+
+                        My main interests lie at the intersection of computer vision, artificial
+                        intelligence, 3D reconstruction, immersive technologies, and extended reality.
+                        I am particularly interested in transforming real-world environments and
+                        objects into accurate, efficient, and interactive digital representations.
+                        </p>
         ];
 
  return (
@@ -57,7 +79,7 @@ const Home = () => {
         <div id='home'>
                 <div className='hero'>
                         {/* <HeroImage /> */}
-                        <h1>Subham SHOME</h1>
+                        <h1>Tamás Bukits</h1>
                         {heroText}
                 </div>
         </div>
@@ -75,12 +97,11 @@ const Home = () => {
                 </div>
                 <h3>Research Interests</h3>
                 <div className='research-card-section'>
-                <ResearchCard title="Image Reconstruction" />
-                <ResearchCard title="Radio Astronomy" />
-                <ResearchCard title="Inverse Problems" />
-                <ResearchCard title="Astroinformatics" />
-                <ResearchCard title="Applied Mathematics" />
-                <ResearchCard title="Tomographic Imaging" />
+                <ResearchCard title="3D Reconstruction" />
+                <ResearchCard title="Gaussian Splatting" />
+                <ResearchCard title="3D Avatar Reconstruction" />
+                <ResearchCard title="Virtual Environments" />
+                <ResearchCard title="Computer Graphics" />
                 <ResearchCard title="Deep Learning" />
                 <ResearchCard title="Computer Vision" />
                 </div>

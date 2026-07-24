@@ -63,7 +63,7 @@ const Header = () => {
         to='/' 
         className={`header-link ${scrolling ? 'scrolled-text' : ''}`}
         onClick={handleScrollToTopClick}>
-        <h2>Subham Shome</h2>
+        <h2>Tamas Bukits</h2>
       </Link>
       <nav className="nav">
         <a href="#about" className={`a ${scrolling ? 'scrolled-a' : ''}`} onClick={handleScrollToSection('about')}>
