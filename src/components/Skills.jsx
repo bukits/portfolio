@@ -9,10 +9,11 @@ import keras from '../assets/skills/keras.png';
 import latex from '../assets/skills/latex.png';
 import matlab from '../assets/skills/matlab.png';
 import matplotlib from '../assets/skills/matplotlib.png';
-import sql from '../assets/skills/mssql.png';
+import opengl from '../assets/skills/opengl.png';
 import numpy from '../assets/skills/numpy.png';
 import opencv from '../assets/skills/opencv.png';
 import pandas from '../assets/skills/pandas.png';
+import typescript from '../assets/skills/typescript.png';
 import pillow from '../assets/skills/pillow.png';
 import python from '../assets/skills/python.png';
 import pytorch from '../assets/skills/pytorch.png';
@@ -24,7 +25,7 @@ import vscode from '../assets/skills/vscode.png';
 import '../styles/skills.css';
 
 
-const languages = [python, matlab, cpp, sql, tex];
+const languages = [python, matlab, cpp, tex, typescript, opengl];
 
 const libraries = [tensorflow, keras, pytorch, opencv, sklearn, skimage, astropy, pillow, numpy, pandas, matplotlib];
 
@@ -36,6 +37,8 @@ const labels = {
     [python]: 'Python',
     [matlab]: 'Matlab',
     [cpp]: 'C++',
+    [typescript]: 'TypeScript',
+    [opengl]: 'OpenGL',
     [git]: 'Git',
     [keras]: 'Keras',
     [astropy]: 'Astropy',
@@ -49,7 +52,6 @@ const labels = {
     [skimage]: 'Scikit-Image',
     [sklearn]: 'Scikit-Learn',
     [tensorflow]: 'TensorFlow',
-    [sql]: 'SQL (MS-SQL)',
     [jupyter]: 'Jupyter Notebooks',
     [anaconda]: 'Anaconda',
     [vscode]: 'Visual Studio Code',

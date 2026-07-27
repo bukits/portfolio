@@ -1,127 +1,115 @@
-import React, { useState }  from 'react';
+import React, { useState } from 'react';
 import ProjectCard from './ProjectCard';
+import VideoModal from './VideoModal';
+import autopilotImage from '../assets/projects/autopilot.png';
+import inspireImage from '../assets/projects/inspire.png';
+
 import '../styles/projects.css';
 
-import deepfake from '../assets/projects/deepfake.png';
-import hubble from '../assets/projects/hubble.png';
-import masters from '../assets/projects/masters.png';
-import murmur from '../assets/projects/murmur.png';
-import mwd from '../assets/projects/mwd.png';
-import opticdisc1 from '../assets/projects/opticdisc1.png';
-import scania from '../assets/projects/scania.png';
-import sdss from '../assets/projects/sdss.png';
-import signature from '../assets/projects/signature.png';
-
-
 const Projects = () => {
-    const projectsData = [
-        {
-        title: "Parameter Learning in Tomography",
-        description: "This is my masters thesis project on tomographic imaging and parameter learning using the famous Shepp-Logan phantom.",
-        image: masters,
-        buttonLabel: "GitHub",
-        buttonLink: "https://github.com/subhamshome/ipcv-masters-thesis"
-        },
-        {
-        title: "Optic disc segmentation in Drishti-GS dataset",
-        description: "This project deals with the segmentation of optic disc from retinal fundus images from the famous Drishti-GS dataset",
-        image: opticdisc1,
-        buttonLabel: "GitHub",
-        buttonLink: "https://github.com/subhamshome/optic-disc-segmentation-drishtigs"
-        },
-        {
-        title: "Sloan Digital Sky Survey DR14",
-        description: "3-class classification of cosmological objects in the famous SDSS dataset, version DR14",
-        image: sdss, 
-        buttonLabel: "GitHub",
-        buttonLink: "https://github.com/subhamshome/sloan-digital-sky-survey-sdss-dr14-ml"
-        },
-        {
-        title: "Deepfake Detection",
-        description: "Detecting deep fake images using various ensemble classifiers",
-        image: deepfake, 
-        buttonLabel: "GitHub",
-        buttonLink: "https://github.com/subhamshome/deepfake-detection"
-        },
-        {
-        title: "ESA Hubble Dataset Creator",
-        description: "Creating the publicly available dataset from images taken by the Hubble Space telescope, by scraping from ESA's website",
-        image: hubble, 
-        buttonLabel: "GitHub",
-        buttonLink: "https://github.com/subhamshome/esa-hubble-dataset-creator"
-        },
-        {
-        title: "Signature Recognition",
-        description: "Recognising signatures and measuring the truth behind every one of them using feature analysis",
-        image: signature, 
-        buttonLabel: "GitHub",
-        buttonLink: "https://github.com/subhamshome/signature-recognition"
-        },
-        {
-        title: "Heart Murmur Classification",
-        description: "Predicting a heart to be normal or abnormal based on the murmur signal classifications using simple ML algorithms",
-        image: murmur, 
-        buttonLabel: "GitHub",
-        buttonLink: "https://github.com/subhamshome/murmur-classification"
-        },
-        {
-        title: "Scania Trucks - Air Pressure Failure Prediction",
-        description: "A classical machine learning algorithm based binary classification on the famous Scania APS dataset",
-        image: scania, 
-        buttonLabel: "GitHub",
-        buttonLink: "https://github.com/subhamshome/scania-aps-fail-pred-ml"
-        },
-        {
-        title: "Multiclass Weather Classification",
-        description: "Comparative analysis of ML and DL algorithms on the popular Multi-class Weather Dataset (MWD) for multi-class weather classification",
-        image: mwd, 
-        buttonLabel: "GitHub",
-        buttonLink: "https://github.com/subhamshome/multiclass-classification-weather-mwd"
-        },        
-    ];
-      
-    const [visibleProjects, setVisibleProjects] = useState(3);
+  const [activeVideo, setActiveVideo] = useState(null);
 
-    // const showMoreProjects = () => {
-    //     setVisibleProjects(visibleProjects + 3);
-    // };
+  const projectsData = [
+    {
+      title: 'Synergia',
+      date: 'Ongoing',
+      description:
+        'Revolutionizing XR with adaptive, human-centric and inclusive virtual worlds powered by Generative AI and multimodal sensing.',
+      videoUrl: 'https://www.youtube.com/watch?v=CxGFzhsCecE',
+      isNew: true,
+      buttonLink: 'https://project-synergia.eu/',
+    },
+    {
+      title: 'Inspire',
+      date: 'Ongoing',
+      description:
+        'Creating realistic digital humans and virtual environments through volumetric 3D reconstruction to deliver more immersive, interactive and effective XR training experiences.',
+      image: inspireImage,
+      isNew: false,
+      buttonLink: 'https://www.ludusglobal.com/blog/ludus-lanza-inspire-digitalizacion-de-personas-y-entornos-con-captura-volumetrica-3d-para-formacion-xr',
+    },
+    {
+      title: 'Autopilot',
+      date: 'Ongoing',
+      description:
+        'Developing an autonomous robotic platform for minimally invasive laparoscopic surgery through surgical video analysis, 3D reconstruction, digital twins and artificial intelligence.',
+      image: autopilotImage,
+      isNew: false,
+      buttonLink: 'https://www.vicomtech.org/en/rdi-tangible/projects/project/cpp-autopilot',
+    },
+    {
+      title: 'Amplify',
+      date: 'Ongoing',
+      description:
+        'Volumetric recording at Gran Teatre del Liceu — reimagining the opera experience.',
+      videoUrl: 'https://www.youtube.com/watch?v=GsdheAZUFU0&time_continue=15&source_ve_path=NzY3NTg&embeds_referring_euri=https%3A%2F%2Fcabrero.me%2F',
+      isNew: false,
+      buttonLink: 'https://amplifyproject.eu/',
+    },
+    {
+      title: 'Bazkaria',
+      date: 'DEC 2025',
+      description:
+        'Eating together through immersive telepresence — a dinner at Mugaritz like no other.',
+      videoUrl: 'https://www.youtube.com/watch?v=H4r9WMXuMZE',
+      isNew: false,
+      buttonLink: 'https://www.vicomtech.org/en/rdi-tangible/success-stories/story/bazkaria-eating-together-through-immersive-telepresence',
+    },
+    {
+      title: 'Scenarist',
+      date: 'NOV 2025',
+      description:
+        'Synthetic data generation for training AI algorithms oriented to public spaces protection',
+      videoUrl: 'https://www.youtube.com/watch?v=3T8-GchrRtw',
+      isNew: false,
+      buttonLink: 'https://www.linkedin.com/posts/ai-scenarist-scenarist-ugcPost-7420102650915983360-cYai/?utm_source=share&utm_medium=member_desktop&rcm=ACoAACeVyGoBDPbav93a-wJDt96gvIa2_bcDW7Q',
+    },
+    {
+      title: 'VHOLO',
+      date: 'OCT 2024',
+      description:
+        'Volumetric video delivered natively on the web.',
+      videoUrl: 'https://www.youtube.com/watch?v=r2RzS2mV7fM&time_continue=0&source_ve_path=NzY3NTg&embeds_referring_euri=https%3A%2F%2Fcabrero.me%2F',
+      isNew: false,
+      buttonLink: 'https://www.vicomtech.org/en/rdi-tangible/projects/project/voluai-volumetric-video-on-the-web',
+    },
+  ];
 
-    const showLessProjects = () => {
-        setVisibleProjects(3);
-    };
+  const openVideo = (project) => {
+    if (!project.videoUrl) return;
 
-    const showAllProjects = () => {
-        setVisibleProjects(projectsData.length);
-      };
+    setActiveVideo({
+      title: project.title,
+      videoUrl: project.videoUrl,
+    });
+  };
 
+  return (
+    <section className="projects-section">
+      <div className="project-cards">
+        {projectsData.map((project) => (
+          <ProjectCard
+            key={project.title}
+            {...project}
+            onPlay={
+              project.videoUrl
+                ? () => openVideo(project)
+                : undefined
+            }
+          />
+        ))}
+      </div>
 
-    return (
-        <div>
-          <div className='project-cards'>
-            {projectsData.slice(0, visibleProjects).map((project, index) => (
-              <ProjectCard
-                key={index}
-                title={project.title}
-                description={project.description}
-                image={project.image}
-                buttonLabel={project.buttonLabel}
-                buttonLink={project.buttonLink}
-              />
-            ))}
-          </div>
-          <div className='view-buttons'>
-            {visibleProjects < projectsData.length ? (
-              <button onClick={showAllProjects} className="view-more-button">
-                Show All {projectsData.length} projects
-              </button>
-            ) : (
-              <button onClick={showLessProjects} className="view-more-button">
-                Show Less
-              </button>
-            )}
-          </div>
-        </div>
-      );
-}
+      {activeVideo && (
+        <VideoModal
+          title={activeVideo.title}
+          videoUrl={activeVideo.videoUrl}
+          onClose={() => setActiveVideo(null)}
+        />
+      )}
+    </section>
+  );
+};
+
 
 export default Projects;

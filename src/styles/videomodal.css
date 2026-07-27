@@ -1,0 +1,103 @@
+.video-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: grid;
+  padding: 70px 7vw;
+  background: rgb(0 0 0 / 88%);
+  place-items: center;
+  animation: video-modal-fade-in 200ms ease;
+}
+
+.video-modal-content {
+  width: min(1100px, 100%);
+  animation: video-modal-scale-in 250ms ease;
+}
+
+.video-modal-player {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #000;
+}
+
+.video-modal-player iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.video-modal-close {
+  position: fixed;
+  top: 34px;
+  right: 7vw;
+  z-index: 2;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.video-modal-close span {
+  position: absolute;
+  top: 18px;
+  left: 6px;
+  width: 27px;
+  height: 2px;
+  background: #fff;
+}
+
+.video-modal-close span:first-child {
+  transform: rotate(45deg);
+}
+
+.video-modal-close span:last-child {
+  transform: rotate(-45deg);
+}
+
+.video-modal-close:hover {
+  transform: scale(1.08);
+}
+
+.video-modal-close:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 4px;
+}
+
+@keyframes video-modal-fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes video-modal-scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 700px) {
+  .video-modal {
+    padding: 60px 16px;
+  }
+
+  .video-modal-close {
+    top: 15px;
+    right: 15px;
+  }
+}

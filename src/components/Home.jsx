@@ -98,6 +98,7 @@ const Home = () => {
                 <h3>Research Interests</h3>
                 <div className='research-card-section'>
                 <ResearchCard title="3D Reconstruction" />
+                <ResearchCard title="Volumetric videos" />
                 <ResearchCard title="Gaussian Splatting" />
                 <ResearchCard title="3D Avatar Reconstruction" />
                 <ResearchCard title="Virtual Environments" />
