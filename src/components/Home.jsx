@@ -11,73 +11,91 @@ import Contact from './Contact';
 
 const Home = () => {
 
-        const heroText = [
-                <div key="hero-text">
-                <p>
-                Researcher at Vicomtech in Donostia–San Sebastián&nbsp; | &nbsp;PhD
-                Candidate at Universidad Politécnica de Madrid&nbsp; | &nbsp;Erasmus
-                Mundus MSc in Image Processing and Computer Vision (IPCV)
-                </p>
+        const heroText = (
+                <div className="hero-intro">
+                        <p className="hero-kicker">
+                                Computer Vision · 3D Reconstruction · XR Research
+                        </p>
+                        <p className="hero-subtitle">
+                                Researcher at Vicomtech in Donostia–San Sebastián&nbsp; | &nbsp;PhD
+                                Candidate at Universidad Politécnica de Madrid&nbsp; | &nbsp;Erasmus
+                                Mundus MSc in Image Processing and Computer Vision (IPCV)
+                        </p>
 
-                <div className="academic-hero">
-                <AcademicBar />
+                        <div className="hero-actions">
+                                <a href="#projects" className="hero-action-primary">Explore Projects</a>
+                                <a href="#contact" className="hero-action-secondary">Contact</a>
+                        </div>
+
+                        <div className="academic-hero">
+                                <AcademicBar />
+                        </div>
                 </div>
-                </div>,
-                ];
+        );
 
         
 
-        const introText = [
-                <p style={{ marginLeft: '10%', marginRight: 0 }}>
-                        I am currently a <b>Researcher at Vicomtech</b> in Donostia–San Sebastián and
-                        an <b>Industrial PhD candidate in Communication Technologies and Systems</b> at
-                        the <b>Polytechnic University of Madrid</b>.
-                        <br /><br />
-
-                        My doctoral research focuses on AI-driven pipelines for creating virtual
-                        environments, humans, and objects from their real-world counterparts. My work
-                        combines multimodal scene understanding, computer vision, 3D reconstruction,
-                        and digital representation to support immersive and interactive media
-                        applications.
-                        <br /><br />
-
-                        I joined <b>Vicomtech</b> in February 2024 as a Research Intern, later
-                        progressed to Research Assistant, and currently work as a Researcher in the
-                        Digital Media Department. Within the Interactive Media research line, I
-                        investigate methods for integrating real-world physical objects into immersive
-                        XR experiences.
-                        <br /><br />
-
-                        My research has included volumetric capture, 3D scene reconstruction, and
-                        Gaussian Splatting. I have developed and extended Gaussian Splatting methods
-                        to improve the accuracy and efficiency of volumetric rendering while reducing
-                        computational complexity.
-                        <br /><br />
-
-                        I hold an <b>Erasmus Mundus Joint MSc in Image Processing and Computer Vision</b>,
-                        completed across <b>Pázmány Péter Catholic University</b> in Hungary, the
-                        <b> Autonomous University of Madrid</b> in Spain, and the
-                        <b> University of Bordeaux</b> in France.
-                        <br /><br />
-
-                        I also hold a <b>BSc in Computer Science Engineering</b> from the
-                        <b> Budapest University of Technology and Economics</b>. Before moving into
-                        research, I worked as a <b>Software Engineer at SwiconGroup</b>, where I
-                        developed backend and frontend features for contract management, HR workflow,
-                        and sales management applications using Node.js, TypeScript, Angular, and Java.
-                        <br /><br />
-
-                        My main interests lie at the intersection of computer vision, artificial
-                        intelligence, 3D reconstruction, immersive technologies, and extended reality.
-                        I am particularly interested in transforming real-world environments and
-                        objects into accurate, efficient, and interactive digital representations.
+        const introText = (
+                <>
+                        <p className="intro-lede">
+                                I build AI-driven pipelines that transform real-world people, objects,
+                                and environments into accurate interactive digital representations.
                         </p>
-        ];
+
+                        <div className="intro-highlights">
+                                <div>
+                                        <span>Current Role</span>
+                                        <strong>Researcher at Vicomtech</strong>
+                                </div>
+                                <div>
+                                        <span>PhD Focus</span>
+                                        <strong>Real-to-virtual reconstruction</strong>
+                                </div>
+                                <div>
+                                        <span>Research Line</span>
+                                        <strong>Immersive XR media</strong>
+                                </div>
+                        </div>
+
+                        <p>
+                                I am currently a <b>Researcher at Vicomtech</b> in Donostia–San
+                                Sebastián and an <b>Industrial PhD candidate in Communication
+                                Technologies and Systems</b> at the <b>Polytechnic University of
+                                Madrid</b>. My work combines multimodal scene understanding, computer
+                                vision, 3D reconstruction, and digital representation for immersive
+                                and interactive media applications.
+                        </p>
+
+                        <p>
+                                I joined <b>Vicomtech</b> in February 2024 as a Research Intern,
+                                later progressed to Research Assistant, and currently work as a
+                                Researcher in the Digital Media Department. Within the Interactive
+                                Media research line, I investigate methods for integrating real-world
+                                physical objects into immersive XR experiences.
+                        </p>
+
+                        <p>
+                                My research has included volumetric capture, 3D scene reconstruction,
+                                and Gaussian Splatting. I have developed and extended Gaussian
+                                Splatting methods to improve the accuracy and efficiency of
+                                volumetric rendering while reducing computational complexity.
+                        </p>
+
+                        <p>
+                                I hold an <b>Erasmus Mundus Joint MSc in Image Processing and
+                                Computer Vision</b>, completed across <b>Pázmány Péter Catholic
+                                University</b> in Hungary, the <b>Autonomous University of Madrid</b>
+                                in Spain, and the <b>University of Bordeaux</b> in France. I also
+                                hold a <b>BSc in Computer Science Engineering</b> from the
+                                <b> Budapest University of Technology and Economics</b>.
+                        </p>
+                </>
+        );
 
  return (
     <div className='main-div-home'>
         <div id='home'>
-                <div className='hero'>
+                <div className='hero hero-content'>
                         {/* <HeroImage /> */}
                         <h1>Tamás Bukits</h1>
                         {heroText}

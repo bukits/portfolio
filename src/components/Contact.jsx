@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/contact.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faFacebook, faInstagram, faMedium, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 const Contact = () => {
 

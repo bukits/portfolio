@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import '../styles/header.css'; 
 import resume from '../assets/Subham_Shome_CV.pdf';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faClose, faCamera } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faClose } from '@fortawesome/free-solid-svg-icons';
 
 const Header = () => {
  const [scrolling, setScrolling] = useState(false);

@@ -1,11 +1,11 @@
 .back-to-top-button {
     display: none;
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #333;
+    bottom: 22px;
+    right: 22px;
+    background-color: var(--color-primary-dark);
     color: #fff;
-    border: none;
+    border: 1px solid rgba(255, 255, 255, 0.16);
     border-radius: 50%;
     cursor: pointer;
     font-size: 24px;
@@ -14,7 +14,7 @@
     text-align: center;
     line-height: 50px;
     transition: background-color 0.3s, transform 0.3s;
-    box-shadow: 0 0 8px rgba(255, 255, 255, 0.23);
+    box-shadow: var(--shadow-tight);
     z-index: 9999;
   }
   
@@ -23,7 +23,8 @@
 }
 
 .back-to-top-button:hover {
-  background-color: #007fff;
+  background-color: var(--color-accent);
+  transform: translateY(-2px);
 }
 
 .arrow {

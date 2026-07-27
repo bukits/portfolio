@@ -1,5 +1,6 @@
 .chrono-icons {
-    size: 24px;
+    width: 24px;
+    height: 24px;
 }
 
 .timeline-main-wrapper {
@@ -16,12 +17,12 @@
 
 .timeline-item-title.rc-title.active {
     background: none !important;
-    color: #EB9F42 !important;
+    color: var(--color-accent) !important;
     border: none !important;
 }
 
 .timeline-item-title.rc-title {
-    color: #EB9F42 !important;
+    color: var(--color-accent) !important;
 }
 
 .timeline-card-content.rc-card{

@@ -66,7 +66,7 @@ const renderSkillsList = (skillList) => (
     <div className="icon-grid">
     {skillList.map((company, index) => (
         <div className="icon-item" key={index}>
-        <img src={company} alt={`Company ${index + 1}`} />
+        <img src={company} alt={labels[company] || 'Skill'} />
         <div className="label">{labels[company] || 'Label not available'}</div>
         </div>
     ))}
@@ -77,28 +77,36 @@ return (
     <div className="skills">
 
         <div className="tab-container">
-            <div className="tabs">
+            <div className="tabs" role="tablist" aria-label="Technical expertise categories">
             <button
+                type="button"
                 onClick={() => setActiveTab('languages')}
-                className={activeTab === 'languages' ? 'active' : ''}
+                className={`tab-button ${activeTab === 'languages' ? 'tab-button-active' : ''}`}
+                aria-pressed={activeTab === 'languages'}
             >
                 Languages
             </button>
             <button
+                type="button"
                 onClick={() => setActiveTab('libraries')}
-                className={activeTab === 'libraries' ? 'active' : ''}
+                className={`tab-button ${activeTab === 'libraries' ? 'tab-button-active' : ''}`}
+                aria-pressed={activeTab === 'libraries'}
             >
                 Libraries
             </button>
             <button
+                type="button"
                 onClick={() => setActiveTab('tools')}
-                className={activeTab === 'tools' ? 'active' : ''}
+                className={`tab-button ${activeTab === 'tools' ? 'tab-button-active' : ''}`}
+                aria-pressed={activeTab === 'tools'}
             >
                 Tools
             </button>
             <button
+                type="button"
                 onClick={() => setActiveTab('all')}
-                className={activeTab === 'all' ? 'active' : ''}
+                className={`tab-button ${activeTab === 'all' ? 'tab-button-active' : ''}`}
+                aria-pressed={activeTab === 'all'}
             >
                 All
             </button>

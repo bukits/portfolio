@@ -1,3 +1,25 @@
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --color-ink: #151715;
+  --color-muted: #626761;
+  --color-soft: #f6f8f5;
+  --color-panel: #ffffff;
+  --color-line: rgba(21, 23, 21, 0.12);
+  --color-primary: #0d6974;
+  --color-primary-dark: #08383f;
+  --color-accent: #e26d4f;
+  --color-gold: #bf8f2f;
+  --shadow-soft: 0 18px 50px rgba(15, 25, 25, 0.12);
+  --shadow-tight: 0 12px 28px rgba(15, 25, 25, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,7 +27,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: transparent;
+  background-color: var(--color-soft);
+  color: var(--color-ink);
 }
 
 code {

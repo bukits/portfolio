@@ -4,7 +4,7 @@
   z-index: 9999;
   display: grid;
   padding: 70px 7vw;
-  background: rgb(0 0 0 / 88%);
+  background: rgb(3 8 10 / 90%);
   place-items: center;
   animation: video-modal-fade-in 200ms ease;
 }
@@ -20,6 +20,8 @@
   aspect-ratio: 16 / 9;
   overflow: hidden;
   background: #000;
+  border-radius: 8px;
+  box-shadow: 0 24px 70px rgb(0 0 0 / 42%);
 }
 
 .video-modal-player iframe {

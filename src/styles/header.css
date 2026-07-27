@@ -1,120 +1,146 @@
 .header {
-  background: none;
-  color: grey;
-  width: 100vw;
+  position: fixed;
+  top: 16px;
+  left: 20px;
+  width: calc(100% - 40px);
+  height: 68px;
+  padding: 0 16px 0 20px;
+  background: rgba(4, 14, 17, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  color: white;
   display: flex;
   z-index: 999;
-  height: 80px;
   align-items: center; 
   justify-content: space-between; 
-  padding: 0;
-  transition: 0.3s ease;
-  position: fixed;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(16px);
+  transition: background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, height 0.25s ease, top 0.25s ease;
 }
 
 .header-link {
   text-decoration: none;
   color: white;
-  margin-left: 20px;
+  margin-left: 0;
   transition: all 0.3s ease;
 }
 
+.header-link h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
 .scrolled-text {
-  color: #333;
+  color: var(--color-ink);
   transition: color 0.3s ease;
 }
 
 .header-link:hover {
-  color: #888888;
+  color: rgba(255, 255, 255, 0.76);
 }
   
 .nav {
   margin-left: auto;
   display: flex;
-  justify-content: space-between;
+  gap: 6px;
+  justify-content: flex-end;
   align-items: center;
-  margin-right: 20px;
-  letter-spacing: 2px;
+  margin-right: 0;
+  letter-spacing: 0.12em;
 }
 
 .a {
   text-decoration: none;
   color: white;
-  margin: 0 10px;
-  padding: 10px;
+  margin: 0;
+  padding: 10px 12px;
+  border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-size: 14px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .a:hover {
-  background-color: grey;
+  background-color: rgba(255, 255, 255, 0.14);
   color: white;
 }
 
 .a.active{
-  background-color: grey;
+  background-color: rgba(255, 255, 255, 0.18);
   color: white;
 }
 
 .scrolled-a {
   text-decoration: none;
-  color: rgb(100, 100, 100);
-  margin: 0 10px;
-  padding: 10px;
+  color: var(--color-muted);
+  margin: 0;
+  padding: 10px 12px;
+  border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-size: 14px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .scrolled-a:hover{
-  background-color: rgb(100, 100, 100);
-  color: white;
+  background-color: rgba(13, 105, 116, 0.1);
+  color: var(--color-primary-dark);
 }
 
 .header-button {
-  border: 2px solid white;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 8px;
   color: white;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.08);
   transition: all 0.3s ease;
   text-decoration: none;
-  margin: 0 10px;
-  padding: 10px;
-  font-size: 14px;
+  margin: 0 0 0 8px;
+  padding: 10px 14px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 .header-button-scrolled {
-  border: 2px solid black;
-  color: black;
+  border: 1px solid var(--color-primary-dark);
+  border-radius: 8px;
+  color: var(--color-primary-dark);
   background-color: transparent;
   transition: all 0.3s ease;
   text-decoration: none;
-  margin: 0 10px;
-  padding: 10px;
-  font-size: 14px;
+  margin: 0 0 0 8px;
+  padding: 10px 14px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 .header-button-scrolled:hover {
-  border: 2px solid black !important;
-  background-color: black !important;
+  border: 1px solid var(--color-primary-dark) !important;
+  background-color: var(--color-primary-dark) !important;
   color: white !important;
 } 
 
 .header-button:hover {
-  border: 2px solid white;
+  border: 1px solid white;
   background-color: white;
-  color: black;
+  color: var(--color-ink);
 }
 
 .scrolled {
-  background-color: white !important;
+  top: 10px;
+  background-color: rgba(255, 255, 255, 0.92) !important;
+  border-color: rgba(21, 23, 21, 0.08);
   transition: background-color 0.3s ease;
-  color: white;
-  width: 100vw;
-  height: 60px;
-  position: fixed;
-  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
-  width: 100vw;
+  color: var(--color-ink);
+  height: 58px;
+  box-shadow: var(--shadow-tight);
 } 
 
 .mobile-menu {
@@ -153,12 +179,12 @@
 }
 
 .camera-icon:hover {
-  color: grey;
+  color: var(--color-accent);
   transition: all 0.3s ease;
 }
 
 .scrolled-camera-icon {
-  color: black;
+  color: var(--color-ink);
 }
 
 .scrolled-camera-icon:hover {
@@ -167,23 +193,44 @@
 }
 
 @media screen and (max-width: 1080px) {
+  .header {
+    top: 12px;
+    left: 12px;
+    width: calc(100% - 24px);
+    height: 58px;
+    padding: 0 12px 0 16px;
+  }
+
+  .header-link h2 {
+    font-size: 1rem;
+  }
+
   .nav {
     display: none;
   }
 
   .mobile-menu-button {
-    display: block;
-    margin-right: 3%;
-    background: none;
+    display: grid;
+    width: 40px;
+    height: 40px;
+    margin-left: auto;
+    margin-right: 0;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 8px;
     color: white;
-    font-size: 24px;
+    font-size: 1.15rem;
     box-shadow: none;
-    border: none;
-    position: fixed;
-    float: right;
-    top: 25px;
-    right: 0;
+    position: static;
+    place-items: center;
     z-index: 9999;
+  }
+
+  .mobile-menu-button svg,
+  .mobile-menu-close-button svg {
+    display: block;
+    width: 18px;
+    height: 18px;
   }
 
   .mobile-menu-button.menu-button-open {
@@ -192,14 +239,10 @@
   }
 
   .scrolled-mobile-menu-button {
-    display: block;
-    top: 17px;
-    right: 0;
-    background: none;
-    color: black;
-    font-size: 24px;
-    box-shadow: none;
-    border: none;
+    display: grid;
+    background: rgba(13, 105, 116, 0.08);
+    border-color: rgba(13, 105, 116, 0.18);
+    color: var(--color-primary-dark);
   }
 
   .mobile-menu-close-button {
@@ -207,42 +250,38 @@
   }
 
   .mobile-menu-close-button.scrolled-mobile-menu-close-button.close-button-open {
-    display: block;
-    top: 17px;
-    right: 0;
-    background: none;
-    color: black;
-    font-size: 24px;
-    box-shadow: none;
-    border: none;
+    display: grid;
+    background: rgba(13, 105, 116, 0.08);
+    color: var(--color-primary-dark);
   }
 
   .mobile-menu-close-button.close-button-open {
-    display: block;
-    margin-right: 3%;
-    background: none;
-    color: black;
-    font-size: 24px;
+    display: grid;
+    width: 40px;
+    height: 40px;
+    margin-left: auto;
+    margin-right: 0;
+    background: rgba(13, 105, 116, 0.08);
+    border: 1px solid rgba(13, 105, 116, 0.18);
+    border-radius: 8px;
+    color: var(--color-primary-dark);
+    font-size: 1.15rem;
     box-shadow: none;
-    border: none;
-    position: fixed;
-    float: right;
-    top: 25px;
-    right: 0;
+    position: static;
+    place-items: center;
     z-index: 9999;
   }
 
   .mobile-menu.open {
     position: fixed;
-    float: right;
     bottom: 0;
     right: 0;
     left: 0;
-    opacity: 0.99;
+    opacity: 1;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.98);
     border: none;
     text-align: center;
     height: 100vh;
@@ -262,16 +301,16 @@
   }
 
   .scrolled-a {
-    color: black;
+    color: var(--color-ink);
+    margin-bottom: 8px;
+    font-size: 1rem;
   }
 
   .scrolled-a:hover {
-    background-color: grey;
+    background-color: rgba(13, 105, 116, 0.1);
   }
 
   .camera-icon {
     color: black !important;
   }
 }
-
-

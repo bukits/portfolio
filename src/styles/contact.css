@@ -1,8 +1,8 @@
 .contact-div-main {
-    margin-left: 10%;
-    margin-right: 10%;
-    /* margin-bottom: 5%; */
-    min-height: 50vh;
+    width: min(1120px, calc(100% - 48px));
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 48vh;
     text-align: center;
 }
 
@@ -13,7 +13,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
-    min-height: 50vh;
+    min-height: 42vh;
     align-content: center;
     justify-content: center;
 }
@@ -24,6 +24,11 @@
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
+    padding: 34px;
+    background: var(--color-panel);
+    border: 1px solid var(--color-line);
+    border-radius: 8px;
+    box-shadow: var(--shadow-tight);
 }
 
 .contact-image {
@@ -39,29 +44,34 @@
 .contact-item {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 18px;
+}
+
+.contact-item:last-child {
+    margin-bottom: 0;
 }
 
 .contact-item svg {
     margin-right: 10px;
-    font-size: 30px;
+    font-size: 24px;
     transition: all 0.3s;
     width: 40px;
+    color: var(--color-accent);
 }
 
 .contact-item svg:hover {
-    transform:rotate(-15deg) scale(1.2);
+    transform: translateY(-2px);
 }
 
 .contact-links {
     text-decoration: none;
-    color: #007fff;
+    color: var(--color-primary);
     transition: all 0.3s ease;
 }
 
 .contact-links:hover {
     text-decoration: none;
-    color: #EB9F42;
+    color: var(--color-accent);
 }
 
 .contact-grid-2 {
@@ -70,15 +80,23 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    padding: 5%;
+    padding: 0;
 }
 
 .map-contact {
-    border: 2px solid black; 
-    margin: 5%;
+    width: 100%;
+    max-width: 600px;
+    border: 1px solid var(--color-line);
+    border-radius: 8px;
+    margin: 0;
+    box-shadow: var(--shadow-tight);
 }
 
 @media (max-width: 1080px) {
+    .contact-div-main {
+        width: min(100% - 32px, 1120px);
+    }
+
     .contact-grid {
         grid-template-columns: 1fr;
     }
@@ -89,21 +107,21 @@
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
-        padding: 5%;
-        max-width: 80vw
+        padding: 0;
+        max-width: 100%;
     }
 
     .contact-item {
-        display: block;
-        text-align: center;   
+        display: flex;
+        text-align: left;
     }
 
     .contact-item svg {
-        margin-right: 0;
+        margin-right: 10px;
     }
 
     .map-contact {
-        max-width: 80vw;
-        max-height: auto;
+        max-width: 100%;
+        min-height: 320px;
     }
 }
