@@ -5,6 +5,7 @@ import resume from '../assets/Tamas_Bukits_CV.pdf';
 
 const Header = () => {
  const [scrolling, setScrolling] = useState(false);
+ const logo = `${process.env.PUBLIC_URL}/logo192.png`;
 
  useEffect(() => {
     const handleScroll = () => {
@@ -53,6 +54,7 @@ const Header = () => {
         to='/' 
         className={`header-link ${scrolling ? 'scrolled-text' : ''}`}
         onClick={handleScrollToTopClick}>
+        <img src={logo} alt="" className="header-logo" aria-hidden="true" />
         <h2>Tamas Bukits</h2>
       </Link>
       <nav className="nav">
