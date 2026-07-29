@@ -35,7 +35,7 @@
 }
 
 #home {
-    background-image: url('../assets/ai_video.gif');
+    background-image: url('../assets/welcome_video.gif');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

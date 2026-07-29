@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'; 
 import { Link } from 'react-router-dom'; 
 import '../styles/header.css'; 
-import resume from '../assets/Subham_Shome_CV.pdf';
+import resume from '../assets/Tamas_Bukits_CV.pdf';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faClose } from '@fortawesome/free-solid-svg-icons';
 
