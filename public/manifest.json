@@ -3,6 +3,16 @@
   "name": "Tamás Bukits Portfolio",
   "icons": [
     {
+      "src": "favicon-48.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "favicon-96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
       "src": "favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
